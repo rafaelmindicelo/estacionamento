@@ -1,0 +1,103 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #B5B5B5;
+	color: #333;
+}
+
+#div_Container {
+	margin: 0 auto;
+	width: 900px;
+	height: auto;
+}
+
+#div_Container #div_Topo {
+	float: left;
+	width: 100%;
+	height: 120px;
+	background: #FFFFFF;
+	margin-top: 5px;
+	text-align: center;
+}
+
+#div_Container #div_Menu {
+	float: left;
+	width: 100%;
+	height: 40px;
+	background: #FFFFFF;
+	text-align: center;
+}
+
+#div_Container #div_Menu ul {
+	margin: 10px;
+}
+
+#div_Container #div_Menu ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+#div_Container #div_Menu ul li a {
+	text-decoration: none;
+	color: #000000;
+	padding: 15px;
+	font-size: 20px;
+}
+
+#div_Container #div_Menu ul li a:hover {
+	color: #CD1076;
+}
+
+#div_Container #div_Conteudo {
+	float: left;
+	width: 100%;
+	background: #DEDEDE;
+	height: 350px;
+}
+
+#div_Container #div_Conteudo #div_Postagem {
+	float: left;
+	width: 96%;
+	padding: 10px;
+	margin: 10px;
+	text-align: justify;
+}
+
+#div_Container #div_Conteudo #div_Postagem h1 {
+	float: left;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#div_Container #div_Conteudo #div_Postagem span {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#div_Container #div_Conteudo #div_Postagem p {
+	float: left;
+	width: 100%;
+}
+
+#div_Container #div_Rodape {
+	float: left;
+	width: 100%;
+	height: 45px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #000;
+}
+
+#div_Container #div_Rodape span {
+	float: left;
+	font-size: 14px;
+	padding-top: 16px;
+	padding-left: 300px;
+}
+
+
+
+

@@ -1,0 +1,68 @@
+{
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	background: #000000;
+	font-family: Arial;
+	color: #ffffff;
+}
+
+#container {
+	margin: 0 auto;
+	width: 500px;
+	height: auto;
+}
+
+#container #login {
+	margin: 5% auto;
+	width: 500px;
+	height: 150px;
+	background: #000000;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#container #login form {
+	display: block;
+}
+
+#container #login form #input {
+	position: relative;
+	top: -90px;
+	left: 110px;
+}
+
+#container #login form #input input[type="text"] {
+	outline: none;
+	display: block;
+	width: 200px;
+	height: 20px;
+	border: #282828 solid 1px;
+	border-radius: 10px;
+}
+
+#container #login form #input input[type="password"] {
+	outline: none;
+	display: block;
+	width: 200px;
+	height: 20px;
+	border: #282828 solid 1px;	
+	border-radius: 10px;
+}
+
+#container #login form #input input[type="submit"] {
+	outline: none;
+	margin-top: 15px;
+	width: 60px;
+	height: 30px;
+	border-radius: 10px;
+}
+
+#container #login .span_IP {
+	position: relative;
+	top: -90px;
+	left: 30px;
+}
