@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #B5B5B5;
+	color: #333;
+}
+
+#div_Container {
+	margin: 0 auto;
+	width: 900px;
+	height: auto;
+}
+
+#div_Container #div_Topo {
+	float: left;
+	width: 100%;
+	height: 120px;
+	background: #A8A8A8;
+	margin-top: 5px;
+	text-align: center;
+}
+
+#div_Container #div_Menu {
+	float: left;
+	width: 100%;
+	height: 40px;
+	background: #FFFFFF;
+	text-align: center;
+}
+
+#div_Container #div_Menu ul {
+	margin: 10px;
+}
+
+#div_Container #div_Menu ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+#div_Container #div_Menu ul li a {
+	text-decoration: none;
+	color: #000000;
+	padding: 15px;
+	font-size: 20px;
+}
+
+#div_Container #div_Menu ul li a:hover {
+	color: #CD1076;
+}
+
+#div_Conteudo {
+	float: left;
+	position: relative;
+	background: #DEDEDE;
+	width: 97.5%;
+	padding: 12px;
+	margin: 5px;
+	text-align: justify;
+	left: -5px;
+	font-weight: 300px;
+	color: #666;
+	line-height: 25px;
+	font-size: 16px;
+	font-family: Arial;
+	
+}
+
+fieldset, p{
+	position: relative;
+	width: 610px;
+	margin: 5px;
+	left: 100px;
+}
+
+#cSexoCliente{
+	position: relative;
+	width: 30%;
+	margin: 10px;
+	left: 200px;
+}
+
+
+form input[type="submit"] {
+	width: 100px;
+	height: 30px;
+	background: #FFF;
+	border: 1px solid #D1D1D1;
+	border-radius: 5px;
+}
+
+
+
+
+#div_Container #div_Rodape {
+	float: left;
+	width: 100%;
+	height: 45px;
+	background: #A8A8A8;
+	border-bottom: 1px solid #000;
+}
+
+#div_Container #div_Rodape span {
+	float: left;
+	font-size: 14px;
+	padding-top: 16px;
+	padding-left: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,7 +9,7 @@ sairPagina ();
 <title>Where's My Car - Cadastro de Mensalista </title>
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
+<link rel="stylesheet" href="_css/style-cadMensal.css" type="text/css" media="all" />
 </head>
 <body>
 	<div id="div_Container">
@@ -38,7 +38,6 @@ sairPagina ();
 		</div>
 
 		<div id="div_Conteudo">
-			<div id="div_CadMensal">
 				<form action="" method="POST">
 					<fieldset id="cCadastro">
 					<legend>Cadastro</legend>
@@ -47,21 +46,24 @@ sairPagina ();
 					</fieldset>
 					<fieldset id="cIdCliente">
 					<legend>Identificação do Cliente</legend>
-					<p><label for="cNome">Nome: </label><input type="text" id="cNome" name="tNome" size="30" placeholder="Nome Completo">
+					<p><label for="cNome">Nome: </label><input type="text" id="cNome" name="tNome" size="30" placeholder="Nome Completo"></p>
+					<p><label for="cDataNasc">DataNasc.: </label><input type="date" id="cDataNasc" name="tDataNasc"/>
 					<label for="cCPF">CPF: </label><input type="text" id="cCPF" name="tCPF" size="11" maxlength="11" placeholder="Digite o CPF"></p>
+					
 					<fieldset id="cSexoCliente">
 					<legend>Sexo</legend>
 					<input type="radio" id="cMasc" name="tSexo"/><label for="cMasc">Masculino</label>
 					<input type="radio" id="cFem" name="tSexo"/><label for="cFem">Feminino</label>
 					</fieldset>
 					</fieldset>
+					
 					<fieldset id="cEndCli">
 					<legend>Endereço do Cliente</legend>
 					<p><label for="cEnd">Logradouro: </label><input type="text" id="cEnd" name="tEnd"	placeholder="Rua, Avenida, Travessa"> 
-					<label for="cNum">Número: </label><input	type="text" id="cNum" name="tNum" size="6" placeholder="Numero"> 
-					<label for="cComp">Compl.: </label><input type="text" id="cComp" name="tComp" size="10" placeholder="casa, apt...">
-					<label for="cCep">CEP: </label><input type="text" id="cCep" size="8" name="tCep" placeholder="CEP"></p>
-					<p><label for="cEst">Estado: </label><select id="cEst" name="tEst">
+					<label for="cNum">Número: </label><input	type="text" id="cNum" name="tNum" size="6" placeholder="Numero"></p> 
+					<p><label for="cComp">Compl.: </label><input type="text" id="cComp" name="tComp" size="10" placeholder="casa, apt...">
+					<label for="cCep">CEP: </label><input type="text" id="cCep" size="8" maxlength="8" name="tCep" placeholder="CEP">
+					<label for="cEst">Estado: </label><select id="cEst" name="tEst">
 							<option value="">Selecione</option>
 							<option value="AC">Acre</option>
 							<option value="AL">Alagoas</option>
@@ -90,8 +92,8 @@ sairPagina ();
 							<option value="SP">São Paulo</option>
 							<option value="SE">Sergipe</option>
 							<option value="TO">Tocantins</option>
-						</select>
-					<label for="cCid">Cidade: </label><input type="text" id="cCid" name="tCid" placeholder="Cidade">					
+						</select></p>
+					<p><label for="cCid">Cidade: </label><input type="text" id="cCid" name="tCid" placeholder="Cidade">					
 					<label for="cBairro">Bairro: </label><input type="text" id="cBairro" name="tBairro" placeholder="Bairro"></p>
 					</fieldset>
 					<fieldset id="cContatoCliente">
@@ -102,7 +104,7 @@ sairPagina ();
 					</fieldset>
 					<p><input type="submit" value="Salvar" /></p>
 				</form>
-			</div>
+			
 
 		</div>
 
