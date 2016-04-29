@@ -20,10 +20,12 @@
 			</div>				
 			<div id="div_Menu"> 
 		    	<ul>
-					<li> <a href="index.php">  Inicio </a> </li>
+					
 					<li> <a href="panel.php">  Painel </a> </li>
-					<li> <a href="panel.php?func=cadastro">  cadastro </a> </li>
-					<li> <a href="panel.php?func=Usuarios">  Usuarios </a> </li>
+					<li> <a href="panel.php?func=cadUsuario">  Cadastro Usuário </a> </li>
+					<li> <a href="cadMensal.php">  Cadastro Mensalista </a> </li>
+					<li> <a href="panel.php?func=Usuarios">  Usuários </a> </li>
+					<li><a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a>
 				</ul>
 			</div>
 			<div id="div_Conteudo">
@@ -43,10 +45,10 @@
 						<h4> Bem vindo ao Painel de Controle <?=$_SESSION["Usuario"]?> </h4>  <br /> <br />
 
 
-						<h3> Informacoes do Site: </h3>
+						<h3> Informações do Site: </h3>
 
 						<p>
-							Usuarios Registrados: <?=$users?> <br />
+							Usuários Registrados: <?=$users?> <br />
 						</p>
 						<?php
 					}						
@@ -54,7 +56,7 @@
 				</div>
 			</div>	
 			<div id="div_Rodape"> 
-				<SPAN> Slater IT Developer's 2015 - Todos os direitos reservados. </SPAN>
+				<SPAN> Slater IT Developer's 2016 - Todos os direitos reservados. </SPAN>
 			</div>
 		</div>
 	</body>

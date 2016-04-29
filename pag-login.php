@@ -54,11 +54,11 @@
 					session_start();
 					$_SESSION["Usuario"] = $user;
 				} else {
-					echo "<script> alert ('Voce nao em permissao!'); location.href='pag-login.php'</script>";
+					echo "<script> alert ('Você não tem permissão!'); location.href='pag-login.php'</script>";
 				}
 			}
 		} else {
-			echo "<script> alert ('Usuario ou Senha incorretos!'); location.href='pag-login.php'</script>";
+			echo "<script> alert ('Usuário ou Senha incorretos!'); location.href='pag-login.php'</script>";
 			
 		}
 	}
