@@ -21,13 +21,12 @@
 		    	<ul>
 		    		<?php 
 		    			if(isset($_SESSION["Usuario"])) { ?>
-		    		<li> <a href="index.php">  Inicio </a> </li>
-					<li> <a href="contato.php">  Contato </a> </li>
+		    		<li> <a href="contato.php">  Contato </a> </li>
 					<li> <a href="panel.php">  Painel </a> </li>
 					<li> <a href="cadMensal.php">  Cadastro Mensalista </a> </li>
 					<li> <a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a> </li>
 					<?php } else { ?>
-					<li> <a href="index.php">  Inicio </a> </li>
+					<li> <a href="index.php">  Início </a> </li>
 					<li> <a href="contato.php">  Contato </a> </li>
 					<li> <a href="pag-login.php">  Login </a> </li>
 					<?php } ?>

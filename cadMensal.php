@@ -23,10 +23,11 @@ sairPagina ();
 		    	<?php
 					if (isset ( $_SESSION ["Usuario"] )) {
 				?>
-		    	<li><a href="index.php"> Início </a></li>
-				<li><a href="contato.php"> Contato </a></li>
 				<li><a href="panel.php"> Painel </a></li>
-				<li><a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a>
+		    	<li> <a href="panel.php?func=cadUsuario">  Cadastro Usuário </a> </li>
+		    	<li><a href="cadMensal.php"> Cadastro Mensalista </a></li>
+		    	<li> <a href="panel.php?func=Usuarios">  Usuários </a> </li>	
+		    	<li><a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a>
 				</li>
 				<?php } else { ?>
 				<li><a href="index.php"> Início </a></li>
@@ -109,7 +110,7 @@ sairPagina ();
 		</div>
 
 		<div id="div_Rodape">
-			<SPAN> Slater It Developer's 2015 - Todos os direitos reservados. </SPAN>
+			<SPAN> Slater It Developer's 2016 - Todos os direitos reservados. </SPAN>
 		</div>
 	</div>
 </body>
