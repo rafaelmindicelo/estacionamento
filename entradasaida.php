@@ -45,7 +45,7 @@
                 }
             }
         </script>
-		<link rel="stylesheet" href="style-index.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="_css/style-index.css" type="text/css" media="all" />
 		 <script>
 function timer()
 {
@@ -60,28 +60,30 @@ function timer()
 	<body onload="timer()">
 		<div id="div_Container">
 			<div id="div_Topo"> 
-				<img id="imageTOPO" src="toposite.png" alt="Imagem Logo" />
+				<img id="imageTOPO" src="_imagens/toposite.png" alt="Imagem Logo" />
 			</div>				
 			<div id="div_Menu"> 
 		    	<ul>
 		    		<?php 
-		    			if(isset($_SESSION["Usuario"])) { ?>
-		    		<li> <a href="index.php">  Inicio </a> </li>
-					<li> <a href="contato.php">  Contato </a> </li>
-					<li> <a href="panel.php">  Painel </a> </li>
-					<li> <a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a> </li>
-					<li> <a href="entradasaida.php">  Sistema </a> </li>
-					<?php } else { ?>
-					<li> <a href="index.php">  Inicio </a> </li>
-					<li> <a href="contato.php">  Contato </a> </li>
-					<li> <a href="registro.php">  Registro </a> </li>
-					<li> <a href="pag-login.php">  Login </a> </li>
-					<li> <a href="entradasaida.php">  Sistema </a> </li>
+		    			if (isset ( $_SESSION ["Usuario"] )) {
+				?>
+				<li><a href="panel.php"> Painel </a></li>
+		    	<li> <a href="panel.php?func=cadUsuario">  Cadastro Usuário </a> </li>
+		    	<li><a href="cadMensal.php"> Cadastro Mensalista </a></li>
+		    	<li> <a href="entradasaida.php">  Entrada </a> </li>
+		    	<li> <a href="panel.php?func=Usuarios">  Usuários </a> </li>	
+		    	<li><a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a>
+				</li>
+				<?php } else { ?>
+				<li><a href="index.php"> Início </a></li>
+				<li><a href="contato.php"> Contato </a></li>
+				<li><a href="registro.php"> Registro </a></li>
+				<li><a href="pag-login.php"> Login </a></li>
 					<?php } ?>
 				</ul>
 			</div>
 			<div id="div_Conteudo">
-				<form action="cadastro.php" method="post">
+				<form action="cadUsuario.php" method="post">
 
 <br>
 <br>

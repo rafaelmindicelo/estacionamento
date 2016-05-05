@@ -26,6 +26,7 @@ sairPagina ();
 				<li><a href="panel.php"> Painel </a></li>
 		    	<li> <a href="panel.php?func=cadUsuario">  Cadastro Usuário </a> </li>
 		    	<li><a href="cadMensal.php"> Cadastro Mensalista </a></li>
+		    	<li> <a href="entradasaida.php">  Entrada </a> </li>
 		    	<li> <a href="panel.php?func=Usuarios">  Usuários </a> </li>	
 		    	<li><a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a>
 				</li>

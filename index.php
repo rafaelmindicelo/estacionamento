@@ -24,6 +24,7 @@
 		    		<li> <a href="contato.php">  Contato </a> </li>
 					<li> <a href="panel.php">  Painel </a> </li>
 					<li> <a href="cadMensal.php">  Cadastro Mensalista </a> </li>
+					<li> <a href="entradasaida.php">Entrada</a> </li>
 					<li> <a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a> </li>
 					<?php } else { ?>
 					<li> <a href="index.php">  Início </a> </li>
