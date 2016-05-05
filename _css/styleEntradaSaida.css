@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+INPUT.voltar{
+		position:absolute;
+		top: 320px;
+		left: 725px;
+		width: 75px;  
+        height: 50px;
+	}
+	INPUT.entrada{
+		position:absolute;
+		top: 320px;
+		left: 315px;
+		width: 75px;  
+        height: 50px;
+	}
+	INPUT.saida{
+		position:absolute;
+		top: 320px;
+		left: 400px;
+		width: 75px;  
+        height: 50px;
+	}
+	INPUT.limpar{
+		position:absolute;
+		top: 320px;
+		left: 490px;
+		width: 75px;  
+        height: 50px;
+	}
+	.cameraConf{
+		position:absolute;
+		top: 450px;
+		left: 1050px;
+		width: 75px;  
+        height: 50px;
+	}
+	.cameraReset{
+		position:absolute;
+		top: 450px;
+		left: 850px;
+		width: 75px;  
+        height: 50px;
+	}
+	.cameraTirar{
+		position:absolute;
+		top: 450px;
+		left: 950px;
+		width: 75px;  
+        height: 50px;
+	}
+	div#camera{
+		position:relative;
+		top: -160px;
+		left: 300px;
+		margin:2px auto;
+		padding: 2px;
+		border: solid black 2px;
+		width: 231px;
+		
+
+
+	}
