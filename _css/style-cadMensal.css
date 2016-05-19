@@ -96,12 +96,14 @@ fieldset, p{
 }
 
 
-form input[type="submit"] {
+form input[type="submit"], [type="reset"] {
+	position: relative;
 	width: 100px;
 	height: 30px;
 	background: #FFF;
 	border: 1px solid #D1D1D1;
 	border-radius: 5px;
+	left: 220px;
 }
 
 

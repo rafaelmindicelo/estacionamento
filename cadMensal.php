@@ -104,7 +104,8 @@ sairPagina ();
 					<label for="cCel">Celular: </label><input type="tel" id="cCel" name="tCel" placeholder="Celular com DDD"></p>
 					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" /></p>
 					</fieldset>
-					<p><input type="submit" value="Salvar" /></p>
+					<p><input type="reset" name="btLimpar" value="Limpar"/> 
+					<input type="submit" name="btSalvar" value="Salvar" /></p>
 				</form>
 			
 
