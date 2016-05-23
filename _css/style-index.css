@@ -52,10 +52,9 @@ body {
 }
 
 #div_Container #div_Conteudo {
-	float: left;
-	width: 100%;
 	background: #DEDEDE;
-	height: 350px;
+	min-height: 350px;
+	padding-bottom: 30px;
 }
 
 #div_Container #div_Conteudo #div_Postagem {

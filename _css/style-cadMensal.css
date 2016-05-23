@@ -64,8 +64,21 @@ body {
 	color: #666;
 	line-height: 25px;
 	font-size: 16px;
-	font-family: Arial;
-	
+	font-family: Arial;	
+}
+
+#div_Conteudo_new {
+	background: #DEDEDE;
+	width: 97.5%;
+	padding: 12px;
+	margin: 5px;
+	text-align: justify;
+	left: -5px;
+	font-weight: 300px;
+	color: #666;
+	line-height: 25px;
+	font-size: 16px;
+	font-family: Arial;	
 }
 
 fieldset, p{
@@ -110,7 +123,9 @@ form input[type="submit"] {
 }
 
 
-
+.margin-top-30{
+	margin-top: 30px;
+}
 
 
 
