@@ -40,7 +40,7 @@ sairPagina ();
 		</div>
 
 		<div id="div_Conteudo">
-				<form action="" method="POST">
+				<form method="POST" action="conexaoMensalista.php?acao=adicionar">
 					<fieldset id="cCadastro">
 					<legend>Cadastro</legend>
 					<p><label for="cCod">Cod Cliente: </label><input type="text" id="cCod" name="tCod" size="4" placeholder="Codigo">
@@ -105,7 +105,7 @@ sairPagina ();
 					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" /></p>
 					</fieldset>
 					<p><input type="reset" name="btLimpar" value="Limpar"/> 
-					<input type="submit" name="btSalvar" value="Salvar" /></p>
+					<input type="submit" name="btSalvar" value="Cadastrar" /></p>
 				</form>
 			
 
