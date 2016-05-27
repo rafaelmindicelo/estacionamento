@@ -1,11 +1,32 @@
+<?php 
+	
+
+	if ($_SESSION["Permissao"]!=1) {
+
+	$redirect="http://localhost/estacionamento/panel.php";
+	echo '<script language="javascript">';
+	echo 'alert("Usuário sem Permissão para acesso!")';
+	echo '</script>';
+	header("location:$redirect");
+	
+	}
+
+?>
 <form id="form_usuario" action="" method="POST">
-	<label> Usuario: </label> <br />
-	 	<input type="text" name="user" placeholder="usuario" /> <br /> <br />
-	<label> E-mail: </label> <br />
-	 	<input type="text" name="email" placeholder="exemplo@email.com" /> <br /> <br />
-	<label> Senha: </label> <br />
-	 	<input type="password" name="senha" placeholder="*******" /> <br /> <br />
-	<input type="submit" name="button" value="Registrar" /> 	
+	<div class="form-group">
+		<label for="nomeUsuario"> Usuario: </label>	
+		<input type="text" class="form-control" id="nomeUsuario" name="user" placeholder="usuario" />
+	</div>
+	<div class="form-group">
+		<label for="emailUsuario"> E-mail: </label>
+	 	<input type="email" class="form-control" id="emailUsuario" name="email" placeholder="exemplo@email.com" />	
+	</div>
+	<div class="form-group">
+		<label for="senhaUsuario"> Senha: </label>
+	 	<input type="password" class="form-control" id="senhaUsuario" name="senha" placeholder="*******" />
+	</div>
+	<input type="submit" class="btn btn-default btn-block" name="button" value="Registrar" /> 	
+		
 </form>
 
 <?php

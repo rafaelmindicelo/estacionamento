@@ -51,6 +51,10 @@ body {
 	color: #CD1076;
 }
 
+.div_boxe {
+	margin-left: 90px;
+}
+
 #div_Container #div_Conteudo {
 	float: left;
 	width: 100%;

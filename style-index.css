@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*body {
+	background: #B5B5B5;
+	color: #333;
+}*/
+
+.div_container {
+/*	margin: 0 auto;
+	width: 900px;
+	height: auto;*/
+}
+
+.div_container .div_topo {
+	height: 120px;
+	background: #FFFFFF;
+	text-align: center;
+}
+
+.div_container .div_topo .nome_usuario{
+	background: #BBB;
+	border-radius: 0px 0px 10px 10px;
+	padding: 5px 10px;
+	color:#FFF;
+	font-weight: 700;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+/*Menu*/
+.div_container .div_menu {
+	height: 40px;
+	background: #FFFFFF;
+	text-align: center;
+}
+
+.div_container .div_menu ul {
+	margin: 10px;
+}
+
+.div_container .div_menu ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+.div_container .div_menu ul li a {
+	text-decoration: none;
+	color: #000000;
+	padding: 15px;
+	font-size: 20px;
+}
+
+.div_container .div_menu ul li a:hover {
+	color: #CD1076;
+}
+
+
+/*Imagem debaixo do menu*/
+.div_boxe {
+	margin-left: 90px;
+}
+
+/*Conteudo*/
+.div_container .div_conteudo {
+	height: 800px;
+	/*background: #DEDEDE;*/
+	
+}
+
+
+/*Conteudo page*/
+.div_container .div_conteudo_page {
+	padding: 30px;
+}
+
+
+/*Login*/
+.body-login{
+	background: #000;
+}
+
+.login{
+	background: #000;
+	
+}
+.login .conteudo_login{
+	margin:0 auto;
+	display: table;
+
+}
+.login #imagelogo{
+		height: 370px;
+		margin: 0 auto;
+		display: block;
+	}
+
+.login .span_IP{
+	color:#FFF;
+	position:absolute;
+	bottom:0;
+}
+/*Trocando Cor da borda da tabela usuarios.php*/
+.div_conteudo_page .table-bordered,
+.div_conteudo_page .table-bordered th,
+.div_conteudo_page .table-bordered td {
+	border: 1px solid #000;
+	text-align: center;
+}
+	
+/*CONTATO*/
+
+.div_container .div_contato{
+    padding-top: 30px;
+}
+
+/*ENTRADA E SAIDA*/
+
+.div_container .div_entradasaida {
+	
+}
+
+/* RODAPE */
+.div_container .div_rodape {
+	float: left;
+	width: 100%;
+	height: 100px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #000;
+}
+
+.div_container .div_rodape span {
+	float: left;
+	font-size: 14px;
+	padding-top: 16px;
+	padding-left: 300px;
+}
+
+
+
+
