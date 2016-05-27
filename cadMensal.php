@@ -43,14 +43,14 @@ sairPagina ();
 				<form method="POST" action="conexaoMensalista.php?acao=adicionar">
 					<fieldset id="cCadastro">
 					<legend>Cadastro</legend>
-					<p><label for="cCod">Cod Cliente: </label><input type="text" id="cCod" name="tCod" size="4" placeholder="Codigo">
-					<label for="cData">Data: </label><input type="date" id="cData" name="tData"/></p>
+					<p><input type="text" id="cCod" name="tCod" size="4" placeholder="Codigo" hidden="cCod">
+					<label for="cData">Data: </label><input type="date" id="cData" name="tData" required="required"/></p>
 					</fieldset>
 					<fieldset id="cIdCliente">
 					<legend>Identificação do Cliente</legend>
-					<p><label for="cNome">Nome: </label><input type="text" id="cNome" name="tNome" size="30" placeholder="Nome Completo"></p>
-					<p><label for="cDataNasc">DataNasc.: </label><input type="date" id="cDataNasc" name="tDataNasc"/>
-					<label for="cCPF">CPF: </label><input type="text" id="cCPF" name="tCPF" size="11" maxlength="11" placeholder="Digite o CPF"></p>
+					<p><label for="cNome">Nome: </label><input type="text" id="cNome" name="tNome" size="30" placeholder="Nome Completo" required="required"></p>
+					<p><label for="cDataNasc">DataNasc.: </label><input type="date" id="cDataNasc" name="tDataNasc" required="required"/>
+					<label for="cCPF">CPF: </label><input type="text" id="cCPF" name="tCPF" size="11" maxlength="11" placeholder="Digite o CPF" required="required"></p>
 					
 					<fieldset id="cSexoCliente">
 					<legend>Sexo</legend>
@@ -61,11 +61,10 @@ sairPagina ();
 					
 					<fieldset id="cEndCli">
 					<legend>Endereço do Cliente</legend>
-					<p><label for="cEnd">Logradouro: </label><input type="text" id="cEnd" name="tEnd"	placeholder="Rua, Avenida, Travessa"> 
-					<label for="cNum">Número: </label><input	type="text" id="cNum" name="tNum" size="6" placeholder="Número"></p> 
-					<p><label for="cComp">Compl.: </label><input type="text" id="cComp" name="tComp" size="10" placeholder="casa, apt...">
-					<label for="cCep">CEP: </label><input type="text" id="cCep" size="8" maxlength="8" name="tCep" placeholder="CEP">
-					<label for="cEst">Estado: </label><select id="cEst" name="tEst">
+					<p><label for="cEnd">Endereço: </label><input type="text" id="cEnd" name="tEnd"	placeholder="Endereço Completo" required="required" size="50"></p> 
+					 
+					<p><label for="cCep">CEP: </label><input type="text" id="cCep" size="8" maxlength="8" name="tCep" placeholder="CEP" required="required">
+					<label for="cEst">Estado: </label><select id="cEst" name="tEst" required="required">
 							<option value="">Selecione</option>
 							<option value="AC">Acre</option>
 							<option value="AL">Alagoas</option>
@@ -95,14 +94,14 @@ sairPagina ();
 							<option value="SE">Sergipe</option>
 							<option value="TO">Tocantins</option>
 						</select></p>
-					<p><label for="cCid">Cidade: </label><input type="text" id="cCid" name="tCid" placeholder="Cidade">					
-					<label for="cBairro">Bairro: </label><input type="text" id="cBairro" name="tBairro" placeholder="Bairro"></p>
+					<p><label for="cCid">Cidade: </label><input type="text" id="cCid" name="tCid" placeholder="Cidade" required="required">					
+					<label for="cBairro">Bairro: </label><input type="text" id="cBairro" name="tBairro" placeholder="Bairro" required="required"></p>
 					</fieldset>
 					<fieldset id="cContatoCliente">
 					<legend>Contato do Cliente</legend>
-					<p><label for="cTel">Telefone: </label><input type="tel" id="cTel" name="tTel" placeholder="Telefone com DDD">					
-					<label for="cCel">Celular: </label><input type="tel" id="cCel" name="tCel" placeholder="Celular com DDD"></p>
-					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" /></p>
+					<p><label for="cTel">Telefone: </label><input type="tel" id="cTel" name="tTel" placeholder="Telefone com DDD" required="required">					
+					<label for="cCel">Celular: </label><input type="tel" id="cCel" name="tCel" placeholder="Celular com DDD" required="required"></p>
+					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" required="required"/></p>
 					</fieldset>
 					<p><input type="reset" name="btLimpar" value="Limpar"/> 
 					<input type="submit" name="btSalvar" value="Cadastrar" /></p>
@@ -117,30 +116,3 @@ sairPagina ();
 	</div>
 </body>
 </html>
-
-
-<?php
-/*
- * if (isset ($_POST["iButton"])) {
- * $iNome = $_POST["iNome"];
- * $iAssunto = $_POST["iAssunto"];
- * $iEmail = $_POST["iEmail"];
- * $iTexto = $_POST["iTexto"];
- *
- * if($iNome == "" || $iAssunto == "" || $iEmail == "" || $iTexto == "") {
- * echo "<script> alert('Preencha todos os campos'); location.href='contato.php'</script>";
- * }
- *
- * $CorpoEmAIL = "
- * E-mail: $iEmail
- * Nome = $iNome
- *
- * $iTexto
- *
- * ";
- * $Enviar = mail("contato@mycar.com.br", $iAssunto, $CorpoEmAIL);
- * echo "<script> alert('E-mail enviado com sucesso!'); location.href='contato.php'</script>";
- * }
- */
-?>
-		
