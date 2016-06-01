@@ -99,8 +99,8 @@ sairPagina ();
 					</fieldset>
 					<fieldset id="cContatoCliente">
 					<legend>Contato do Cliente</legend>
-					<p><label for="cTel">Telefone: </label><input type="tel" id="cTel" name="tTel" placeholder="Telefone com DDD" required="required">					
-					<label for="cCel">Celular: </label><input type="tel" id="cCel" name="tCel" placeholder="Celular com DDD" required="required"></p>
+					<p><label for="cTel">Tel: </label><input type="tel" id="cTel" name="tTel" placeholder="Telefone com DDD" required="required">					
+					<label for="cCel">Cel: </label><input type="tel" id="cCel" name="tCel" placeholder="Celular com DDD" required="required"></p>
 					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" required="required"/></p>
 					</fieldset>
 					<p><input type="reset" name="btLimpar" value="Limpar"/> 
