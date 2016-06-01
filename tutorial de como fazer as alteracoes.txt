@@ -1,0 +1,13 @@
+Como Master
+
+1 - Clicar com o direito Team - Pull 
+
+2 - Botão direito Team - Switch twoo - Desenvolvimento
+
+3 - Botão direito Team - Commit
+
+4 - "" Switch Twoo - Master
+
+5 - "" Merge - 2x desenvolvimento
+
+6 - "" Push Two Up Strem

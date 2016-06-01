@@ -10,18 +10,16 @@
 <html>
 	<head>
 		<title> Estacionamento </title>
-		<link rel="stylesheet" href="_css/style-cadMensal.css"/>
-		<meta name="viewport" content="width=device-width">
-        <script type="text/javascript" src="_webcam/webcam.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
-          <script src="_js/jquery.mask.min.js"></script>	
-          
-	    <script src="_js/bootstrap.min.js"></script>
-	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-		<script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-		<link rel="stylesheet" href="_css/bootstrap.css"/>
-        <script type="text/javascript">  
+		<link rel="stylesheet" href="style-index.css" type="text/css" media="all" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+
         	$(document).ready(function(){
 			  $('.placa').mask('AAA-0000');
 			   $('#datetimepicker1').datetimepicker();
@@ -57,7 +55,7 @@
                 }
             }
         </script>
-		<link rel="stylesheet" href="_css/style-index.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="style-index.css" type="text/css" media="all" />
 		 <script>
 function timer()
 {
@@ -70,50 +68,48 @@ function timer()
 
 	</head>
 	<body>
-	<div class="container-fluid">
-		<nav class="navbar navbar-default navbar-fixed-top cor1" role="navigation">
+			<div class="container div_container">
+			<div class="div_topo col-xs-12"> 
+				<?php if(isset($_SESSION["Usuario"])) { ?>
+					<div class="nome_usuario pull-right">
+						<?php echo $_SESSION["Usuario"]; ?>
+						<a href="index.php?func=sairPagina" class="text-danger btn"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sair</a>
+					</div>
 
-		    <div class="container-fluid">
+				<?php } ?>				
 
-		        <a class="navbar-brand" href="" style="padding:7px;">
-		        	<img alt="Brand" src="_imagens/toposite.png" width="130" height="35">
-		        </a>
-				
-				<ul class="nav nav-pills hidden-xs" role="tablist">
-				    		<?php 
-				    			if (isset ( $_SESSION ["Usuario"] )) {
-						?>
-						<li role="presentation"><a href="panel.php"> Painel </a></li>
-				    	<li role="presentation"> <a href="panel.php?func=cadUsuario">  Cadastro Usu&aacute;rio </a> </li>
-				    	<li role="presentation"><a href="cadMensal.php"> Cadastro Mensalista </a></li>
-				    	<li role="presentation"> <a href="entradasaida.php">  Entrada </a> </li>
-				    	<li role="presentation"> <a href="panel.php?func=Usuarios">  Usu&aacute;rios </a> </li>	
-				    	<li role="presentation"><a href="index.php?func=sairPagina">  Sair ( <?php echo $_SESSION["Usuario"]; ?> ) </a>
-						</li>
-						<?php } else { ?>
-						<li role="presentation"><a href="index.php"> In	&iacute;cio </a></li>
-						<li role="presentation"><a href="contato.php"> Contato </a></li>
-						<li role="presentation"><a href="registro.php"> Registro </a></li>
-						<li role="presentation"><a href="pag-login.php"> Login </a></li>
-							<?php } ?>
-				</ul>
+				<img class="imageTOPO" src="toposite.png" alt="Imagem Logo" />
+			</div>				
+			<div class="div_menu col-xs-12">
+				    <ul>		
+				    	<?php 
+		    			if(isset($_SESSION["Usuario"])) { ?>
+		    		<li> <a href="index.php">  Inicio </a> </li>
+					<li> <a href="contato.php">  Contato </a> </li>
+						<?php if(($_SESSION["Permissao"] == 1)) { ?>
+					<li> <a href="panel.php">  Painel </a> </li>
+					 
+						<?php } ?>					
 
+					<?php } else { ?>
+					<li> <a href="index.php">  Inicio </a> </li>
+					<li> <a href="contato.php">  Contato </a> </li>
+					<li> <a href="sobre.php"> Sobre </a></li>		
+			        <li> <a href="pag-login.php">  Login </a> </li>
+					<?php } ?>
+					</ul>		
+			</div>
+			<div class="div_boxe col-xs-12">
+				<img src="entradaesaida.jpg" alt="...">
+			</div>
 		      
 		    </div>
 
 		</nav>
 	</div>
-	<div class="container-fluid">
-
-    <div class="page-header">
-        <div class="row">
-            <div class="col-md-6 cor1 margin-top-20"><h1><span class='fa fa-cog' aria-hidden='true'></span> Entrada e Saida</h1></div>
-        </div>
-
-    </div>
-
-		<div class='col-md-12 row'>
-			<div class='col-md-8 col-md-offset-2'>				
+	
+		<div class='div_conteudo col-xs-12' style="margin-top: 20px">
+			<div class='div_entradasaida col-md-8 col-md-offset-2' style="">				
     			<form action="" method="POST">
 					
 					<div class='col-md-8'>
@@ -161,13 +157,13 @@ function timer()
 								<option value="3">fwefwef</option>
 							</select>
 						</div>
-						<div class='col-md-3 margin-top-30'>
+						<div class='col-md-3 margin-top-30' style="margin-top: 20px">
 							<input class='button form-control' type='submit' name="entrada" value='entrada'>
 						</div>
-						<div class='col-md-3 margin-top-30'>
+						<div class='col-md-3 margin-top-30' style="margin-top: 20px">
 							<input class='button form-control col-md-3' type='submit' name="saida" value='saida'>
 						</div>
-						<div class='col-md-3 margin-top-30'>
+						<div class='col-md-3 margin-top-30' style="margin-top: 20px">
 							<input class='button form-control col-md-3' type='button' value='Limpar'>
 						</div>
 					</div>	
@@ -187,14 +183,14 @@ function timer()
 				            <input type=button value="Reset" onClick="webcam.reset()" class="cameraReset">
 				        </form>
 					</div>
-					<div class='col-md-4 col-md-offset-8 margin-top-30' id="upload_results"></div>
-				</form>				
-		</div>
+				</div>
+				<div class="div_rodape"> 
+				<SPAN> Slater IT Developer's 2015 - Todos os direitos reservados. </SPAN>
+				</div>	
+			</div>		
+	</body>
+</html>  	   	
 
-   		
-        	
-
-</html>
 <?php 
 
 	$mysqli = new mysqli($host, $user, $pass, $data);

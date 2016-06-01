@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
-<table width="100%">
+<table class="table table-striped table-bordered text-center">
 	<thead>
-		<tr>
+		<tr class="success">
 			<th>
 				ID
 			</th>
