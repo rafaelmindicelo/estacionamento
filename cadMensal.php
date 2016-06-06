@@ -9,12 +9,29 @@ sairPagina ();
 <title>Where's My Car - Cadastro de Mensalista </title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="_css/style-cadMensal.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="_css/style-cadMensal.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+		<script language="JavaScript" src="_js/validaForm.js"></script>
+		<script language="JavaScript">
+		function mascara(t, mask){
+			 var i = t.value.length;
+			 var saida = mask.substring(1,0);
+			 var texto = mask.substring(i)
+			 if (texto.substring(0,1) != saida)
+			 {
+				 t.value += texto.substring(0,1);
+			 }
+		}
+
+		</script>
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
 </head>
 <body>
 	<div id="div_Container">
 		<div id="div_Topo">
 			<img id="imageTOPO" src="_imagens/toposite.png" alt="Imagem Logo" />
+			
 
 		</div>
 
@@ -40,31 +57,31 @@ sairPagina ();
 		</div>
 
 		<div id="div_Conteudo">
-				<form method="POST" action="conexaoMensalista.php?acao=adicionar">
+				<form name="formCadMens" method='POST' action='conexaoMensalista.php?acao=adicionar'> 
 					<fieldset id="cCadastro">
 					<legend>Cadastro</legend>
-					<p><input type="text" id="cCod" name="tCod" size="4" placeholder="Codigo" hidden="cCod">
-					<label for="cData">Data: </label><input type="date" id="cData" name="tData" required="required"/></p>
+					<p><input type="text" id="cCod" name="tCod" size="4" placeholder="Codigo" hidden="cCod"/>
+					<label for="cData">Data: </label><input type="date" id="cData" name="tData" "/></p>
 					</fieldset>
 					<fieldset id="cIdCliente">
-					<legend>Identificação do Cliente</legend>
-					<p><label for="cNome">Nome: </label><input type="text" id="cNome" name="tNome" size="30" placeholder="Nome Completo" required="required"></p>
-					<p><label for="cDataNasc">DataNasc.: </label><input type="date" id="cDataNasc" name="tDataNasc" required="required"/>
-					<label for="cCPF">CPF: </label><input type="text" id="cCPF" name="tCPF" size="11" maxlength="11" placeholder="Digite o CPF" required="required"></p>
+						<legend>Identificação do Cliente</legend>
+							<p><label for="cNome">Nome: </label><input type="text" id="cNome" name="tNome" size="30" autofocus="autofocus" placeholder="Nome Completo"/></p>
+							<p><label for="cDataNasc">DataNasc.: </label><input type="date" id="cDataNasc" name="tDataNasc"/>
+							<label for="cCPF">CPF: </label><input type="text" onkeypress="mascara(this, '000.000.000-00')" maxlength="14" id="cCPF" name="tCPF" placeholder="Digite o CPF" /></p>
 					
-					<fieldset id="cSexoCliente">
-					<legend>Sexo</legend>
-					<input type="radio" id="cMasc" name="tSexo"/><label for="cMasc">Masculino</label>
-					<input type="radio" id="cFem" name="tSexo"/><label for="cFem">Feminino</label>
-					</fieldset>
+							<fieldset id="cSexoCliente">
+								<legend>Sexo</legend>
+									<input type="radio" id="cMasc" name="tSexo"/><label for="cMasc">Masculino</label>
+									<input type="radio" id="cFem" name="tSexo"/><label for="cFem">Feminino</label>
+							</fieldset>
 					</fieldset>
 					
 					<fieldset id="cEndCli">
 					<legend>Endereço do Cliente</legend>
-					<p><label for="cEnd">Endereço: </label><input type="text" id="cEnd" name="tEnd"	placeholder="Endereço Completo" required="required" size="50"></p> 
+					<p><label for="cEnd">Endereço: </label><input type="text" id="cEnd" name="tEnd"	placeholder="Endereço Completo" size="50"/></p> 
 					 
-					<p><label for="cCep">CEP: </label><input type="text" id="cCep" size="8" maxlength="8" name="tCep" placeholder="CEP" required="required">
-					<label for="cEst">Estado: </label><select id="cEst" name="tEst" required="required">
+					<p><label for="cCep">CEP: </label><input type="text" id="cCep" size="9" maxlength="9" name="tCep" onkeypress="mascara(this, '#####-###')" placeholder="CEP" />
+					<label for="cEst">Estado: </label><select id="cEst" name="tEst">
 							<option value="">Selecione</option>
 							<option value="AC">Acre</option>
 							<option value="AL">Alagoas</option>
@@ -94,21 +111,20 @@ sairPagina ();
 							<option value="SE">Sergipe</option>
 							<option value="TO">Tocantins</option>
 						</select></p>
-					<p><label for="cCid">Cidade: </label><input type="text" id="cCid" name="tCid" placeholder="Cidade" required="required">					
-					<label for="cBairro">Bairro: </label><input type="text" id="cBairro" name="tBairro" placeholder="Bairro" required="required"></p>
+					<p><label for="cCid">Cidade: </label><input type="text" id="cCid" name="tCid" placeholder="Cidade"/>					
+					<label for="cBairro">Bairro: </label><input type="text" id="cBairro" name="tBairro" placeholder="Bairro"/></p>
 					</fieldset>
 					<fieldset id="cContatoCliente">
 					<legend>Contato do Cliente</legend>
-					<p><label for="cTel">Tel: </label><input type="tel" id="cTel" name="tTel" placeholder="Telefone com DDD" required="required">					
-					<label for="cCel">Cel: </label><input type="tel" id="cCel" name="tCel" placeholder="Celular com DDD" required="required"></p>
-					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" required="required"/></p>
+					<p><label for="cTel">Tel: </label><input type="text" id="cTel" name="tTel" onkeypress="mascara(this, '00 0000-0000')" maxlength="14" placeholder="(__) ____-____"   />					
+					<label for="cCel">Cel: </label><input type="text" id="cCel" name="tCel" onkeypress="mascara(this, '00 00000-0000')" maxlength="15" placeholder="(__) _____-____" /></p>
+					<p><label for="cEmail">Email: </label><input type="email" id="cEmail" name="tEmail" placeholder="Digite o email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/></p>
 					</fieldset>
 					<p><input type="reset" name="btLimpar" value="Limpar"/> 
-					<input type="submit" name="btSalvar" value="Cadastrar" /></p>
-				</form>
-			
+					<input type="submit" onClick="validaForm();" name="btSalvar" value="Cadastrar"  /></p>
 
-		</div>
+				</form>
+			</div>
 
 		<div id="div_Rodape">
 			<SPAN> Slater It Developer's 2016 - Todos os direitos reservados. </SPAN>
